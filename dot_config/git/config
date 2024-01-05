@@ -1,0 +1,12 @@
+[user]
+        name = Rasmus Bertell
+        email = rasmus@bertell.fi
+
+[merge]
+        tool = nvim
+
+[mergetool]
+        prompt = false
+
+[mergetool "nvim"]
+        cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
