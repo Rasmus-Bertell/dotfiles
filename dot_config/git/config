@@ -2,11 +2,20 @@
         name = Rasmus Bertell
         email = rasmus@bertell.fi
 
+[diff]
+        tool = nvimdiff
+
+[difftool]
+        prompt = false
+
 [merge]
-        tool = nvim
+        tool = fugitive
 
 [mergetool]
         prompt = false
 
-[mergetool "nvim"]
-        cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[difftool "nvimdiff"]
+        cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[mergetool "fugitive"]
+        cmd = "nvim -f -c \"Gvdiffsplit!\" \"$MERGED\""
