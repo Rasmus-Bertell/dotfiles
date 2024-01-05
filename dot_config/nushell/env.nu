@@ -1,6 +1,6 @@
 # Nushell Environment Config File
 #
-# version = "0.86.0"
+# version = "0.87.1"
 
 def create_left_prompt [] {
     let home =  $nu.home-path
@@ -100,20 +100,24 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/bin")
 
-$env.XDG_CONFIG_HOME = $"($env.HOME)/.config"
-$env.XDG_CACHE_HOME  = $"($env.HOME)/.cache"
-$env.XDG_DATA_HOME   = $"($env.HOME)/.local/share"
-$env.XDG_STATE_HOME  = $"($env.HOME)/.local/state"
+$env.XDG_CONFIG_HOME =  ($env.HOME | path join ".config")
+$env.XDG_CACHE_HOME  =  ($env.HOME | path join ".cache")
+$env.XDG_DATA_HOME   =  ($env.HOME | path join ".local" | path join "share")
+$env.XDG_STATE_HOME  =  ($env.HOME | path join ".local" | path join "state")
 
-$env.XDG_DESKTOP_DIR     = $"($env.HOME)"
-$env.XDG_DOWNLOAD_DIR    = $"($env.HOME)"
-$env.XDG_PUBLICSHARE_DIR = $"($env.HOME)/public"
-$env.XDG_TEMPLATES_DIR   = $"($env.HOME)/templates"
-$env.XDG_DOCUMENTS_DIR   = $"($env.HOME)/documents"
-$env.XDG_PROJECTS_DIR    = $"($env.HOME)/projects"
-$env.XDG_MUSIC_DIR       = $"($env.HOME)/media/music"
-$env.XDG_PICTURES_DIR    = $"($env.HOME)/media/pictures"
-$env.XDG_VIDEOS_DIR      = $"($env.HOME)/media/videos"
+$env.XDG_DESKTOP_DIR     =  $env.HOME
+$env.XDG_DOWNLOAD_DIR    =  $env.HOME
+$env.XDG_PUBLICSHARE_DIR =  ($env.HOME | path join "public")
+$env.XDG_TEMPLATES_DIR   =  ($env.HOME | path join "templates")
+$env.XDG_DOCUMENTS_DIR   =  ($env.HOME | path join "documents")
+$env.XDG_PROJECTS_DIR    =  ($env.HOME | path join "projects")
+$env.XDG_MUSIC_DIR       =  ($env.HOME | path join "media" | path join "music")
+$env.XDG_PICTURES_DIR    =  ($env.HOME | path join "media" | path join "pictures")
+$env.XDG_VIDEOS_DIR      =  ($env.HOME | path join "media" | path join "videos")
 
-$env.EDITOR = nvim
-$env.VISUAL = nvim
+$env.EDITOR   = "nvim"
+$env.VISUAL   = $env.EDITOR
+$env.PAGER    = "nvimpager"
+$env.MANPAGER = "nvimpager"
+
+$env.SSH_AUTH_SOCK = ($env.XDG_RUNTIME_DIR | path join "ssh-agent.socket")
