@@ -1,0 +1,53 @@
+* {
+        font-family: VictorMono Nerd Font;
+        font-size: 14px;
+
+        min-height: 0;
+}
+
+#waybar {
+        background: rgba(0, 0, 0, 1.0);
+        color: rgba(255, 255, 255, 1.0);
+}
+
+#waybar>box {
+        padding: 0.25rem 0;
+}
+
+#tags button,
+#window,
+#tray,
+#bluetooth,
+#network,
+#wireplumber,
+#backlight,
+#battery,
+#clock {
+        background: rgba(100, 100, 100, 0.75);
+
+        padding: 0 0.5rem;
+        margin: 0 0.25rem;
+
+        border-radius: 0.5rem;
+
+        border: none;
+        box-shadow: none;
+}
+
+#tags button {
+        background: rgba(0, 0, 0, 0.0);
+        color: rgba(255, 255, 255, 1.0);
+}
+
+#tags button:hover,
+#tags button.focused {
+        background: rgba(150, 150, 150, 0.5);
+}
+
+#tags button.occupied label {
+        box-shadow: inset 0 0.125rem rgba(255, 255, 255, 0.5);
+}
+
+#tags button.urgent {
+        background: rgba(200, 100, 100, 0.75);
+}

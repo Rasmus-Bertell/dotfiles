@@ -1,0 +1,66 @@
+{
+        "modules-left": ["river/tags"],
+        "modules-center": ["river/window"],
+        "modules-right": ["tray", "bluetooth", "network", "wireplumber", "backlight", "battery", "clock"],
+        "bluetooth": {
+                "format": "{icon} {device_alias}",
+                "format-disabled": "󰂲",
+                "format-off": "󰂲",
+                "format-on": "󰂯",
+                "format-connected": " {device_alias}",
+                "format-connected-battery": "{icon} {device_alias}",
+                "format-icons": ["󰤾", "󰤿", "󰥀", "󰥁", "󰥂", "󰥃", "󰥄", "󰥅", "󰥆", "󰥈"],
+                "on-click": "#TODO: Connect to headset",
+                "on-click-middle": "#TODO: Open terminal",
+                "on-click-right": "bluetooth_power_toggle",
+                "tooltip": false
+        },
+        "network": {
+                "interface": "wlan0",
+                "format": "{icon} ",
+                "format-linked": "󰣻 ",
+                "format-disconnected": "󰣼 ",
+                "format-disabled": "󰣼 ",
+                "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
+                "on-click": "#TODO: Connect/disconnect",
+                "on-click-middle": "#TODO: Open terminal",
+                "on-click-right": "#TODO: Toggle power",
+                "tooltip": true,
+                "tooltip-format": "{essid}"
+        },
+        "wireplumber": {
+                "format": "{icon} {volume}%",
+                "format-muted": "󰸈 {volume}%",
+                "format-icons": ["󰕿", "󰖀", "󰕾"],
+                "on-click": "#TODO: Toggle mute",
+                "on-click-middle": "#TODO: Open terminal",
+                "on-click-right": "#TODO: Toggle mic mute",
+                "tooltip": false
+        },
+        "backlight": {
+                "format": "{icon} {percent}%",
+                "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+                "tooltip": false
+        },
+        "battery": {
+                "format": "󰂑{capacity}%",
+                "format-charging": "󰂄{capacity}%",
+                "format-discharging": "{icon}{capacity}%",
+                "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+                "tooltip": false
+        },
+        "clock": {
+                "format": "󰥔 {:%H:%M}",
+                "tooltip-format": "󰃭 {calendar}",
+                "calendar": {
+                        "weeks-pos": "left",
+                        "format": {
+                                "months": "<b><i>{}</i></b>",
+                                "days": "{}",
+                                "weeks": "<b>W{}</b>",
+                                "weekdays": "<b>{}</b>",
+                                "today": "<b><u>{}</u></b>"
+                        }
+                },
+        }
+}
