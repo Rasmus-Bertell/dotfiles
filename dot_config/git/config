@@ -9,7 +9,7 @@
         prompt = false
 
 [merge]
-        tool = fugitive
+	tool = nvimdiff
 
 [mergetool]
         prompt = false
@@ -18,4 +18,7 @@
         cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [mergetool "fugitive"]
-        cmd = "nvim -f -c \"Gvdiffsplit!\" \"$MERGED\""
+	cmd = "nvim -f -c \"Gvdiffsplit!\" \"$MERGED\""
+
+[mergetool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
