@@ -18,3 +18,8 @@ vim.opt.softtabstop = 8
 
 -- Use system clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Show relative line numbers and always show sign column
+vim.opt.signcolumn     = "yes"
+vim.opt.number         = true
+vim.opt.relativenumber = true
