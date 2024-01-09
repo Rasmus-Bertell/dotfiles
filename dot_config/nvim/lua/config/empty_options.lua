@@ -15,3 +15,6 @@ vim.opt.smartindent = true
 vim.opt.shiftwidth  = 8
 vim.opt.tabstop     = 8
 vim.opt.softtabstop = 8
+
+-- Use system clipboard
+vim.opt.clipboard = "unnamedplus"
