@@ -37,10 +37,8 @@ M.opts = {
                 map('n', '<leader>sb', gs.stage_buffer)
                 map('n', '<leader>rb', gs.reset_buffer)
 
-                map('n', '<leader>hb', function() gs.blame_line{full=true} end)
-                map('n', '<leader>tb', gs.toggle_current_line_blame)
-                map('n', '<leader>dh', gs.diffthis)
-                map('n', '<leader>Dh', function() gs.diffthis('~') end)
+                map('n', '<leader>tb', function() gs.blame_line{full=true} end)
+                map('n', '<leader>db', gs.diffthis)
         end
 }
 
