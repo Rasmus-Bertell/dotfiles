@@ -1,4 +1,10 @@
-{{ $email := promptString "email" -}}
+{{- $choices := list "foot*:Tc" "screen-256color" -}}
+{{- $tmux-terminal := promptChoice "What is tmux default terminal" $choices -}}
+
+{{- $email := promptString "email" -}}
 
 data:
-    email: {{ $email | quote }}
+        user:
+                email: {{ $email | quote }}
+        tmux:
+                default-terminal: {{ $tmux-terminal | quote }}
