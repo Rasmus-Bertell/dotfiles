@@ -3,6 +3,11 @@
 
 {{- $email := promptString "What is the users email" "rasmus@bertell.fi" -}}
 
+git:
+        autoAdd:    true
+        autoCommit: true
+        autoPush:   true
+
 data:
         user:
                 email: {{ $email | quote }}
