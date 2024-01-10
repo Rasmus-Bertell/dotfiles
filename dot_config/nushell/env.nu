@@ -126,3 +126,5 @@ $env.CARGO_HOME       = ($env.XDG_DATA_HOME | path join "cargo")
 $env.GNUPGHOME        = ($env.XDG_DATA_HOME | path join "gnupg")
 $env.SSH_AUTH_SOCK    = (gpgconf --list-dirs agent-ssh-socket)
 $env.GPG_TTY          = (tty)
+
+gpg-connect-agent updatestartuptty /bye > /dev/null
