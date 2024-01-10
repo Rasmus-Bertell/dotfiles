@@ -8,6 +8,21 @@ git:
         autoCommit: true
         autoPush:   true
 
+diff:
+        command: "nvim"
+        args:
+                - "-d"
+                - "{{ "{{" }} .Destination {{ "}}" }}"
+                - "{{ "{{" }} .Target {{ "}}" }}"
+
+merge:
+        command: "nvim"
+        args:
+                - "-d"
+                - "{{ "{{" }} .Destination {{ "}}" }}"
+                - "{{ "{{" }} .Source {{ "}}" }}"
+                - "{{ "{{" }} .Target {{ "}}" }}"
+
 data:
         user:
                 email: {{ $email | quote }}
