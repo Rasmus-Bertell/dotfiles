@@ -121,3 +121,5 @@ $env.PAGER    = "nvimpager"
 $env.MANPAGER = "nvimpager"
 
 $env.SSH_AUTH_SOCK = ($env.XDG_RUNTIME_DIR | path join "ssh-agent.socket")
+
+$env.MARIADB_HISTFILE = ($env.XDG_STATE_HOME | path join "mariadb" | path join "history")
