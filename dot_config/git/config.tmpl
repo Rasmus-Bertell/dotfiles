@@ -1,6 +1,6 @@
 [user]
-        name = Rasmus Bertell
-        email = rasmus@bertell.fi
+        name  = Rasmus Bertell
+        email = {{ email }}
 
 [diff]
         tool = nvimdiff
@@ -16,9 +16,6 @@
 
 [difftool "nvimdiff"]
         cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
-
-[mergetool "fugitive"]
-	cmd = "nvim -f -c \"Gvdiffsplit!\" \"$MERGED\""
 
 [mergetool "nvimdiff"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
