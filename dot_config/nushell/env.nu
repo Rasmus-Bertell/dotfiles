@@ -127,4 +127,4 @@ $env.GNUPGHOME        = ($env.XDG_DATA_HOME | path join "gnupg")
 $env.SSH_AUTH_SOCK    = (gpgconf --list-dirs agent-ssh-socket)
 $env.GPG_TTY          = (tty)
 
-gpg-connect-agent updatestartuptty /bye | /dev/null
+gpg-connect-agent updatestartuptty /bye | ignore
