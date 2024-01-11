@@ -3,7 +3,7 @@ Description=GnuPG cryptographic agent (ssh-agent emulation)
 Documentation=man:gpg-agent(1) man:ssh-add(1) man:ssh-agent(1) man:ssh(1)
 
 [Socket]
-ListenStream=%t/gnupg/d.py6wfbk8krzr6s5d4ese8a1t/S.gpg-agent.ssh
+ListenStream=%t/gnupg/{{ .user.gpg_socket }}/S.gpg-agent.ssh
 FileDescriptorName=ssh
 Service=gpg-agent.service
 SocketMode=0600

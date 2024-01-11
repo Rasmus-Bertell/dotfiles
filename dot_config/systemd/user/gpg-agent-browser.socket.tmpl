@@ -3,7 +3,7 @@ Description=GnuPG cryptographic agent and passphrase cache (access for web brows
 Documentation=man:gpg-agent(1)
 
 [Socket]
-ListenStream=%t/gnupg/d.py6wfbk8krzr6s5d4ese8a1t/S.gpg-agent.browser
+ListenStream=%t/gnupg/{{ .user.gpg_socket }}/S.gpg-agent.browser
 FileDescriptorName=browser
 Service=gpg-agent.service
 SocketMode=0600
