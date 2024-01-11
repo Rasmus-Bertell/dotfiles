@@ -26,6 +26,6 @@ merge:
 data:
         user:
                 email: {{ $email | quote }}
-                gpg_home: "TODO: get it with `gpgconf --list-dirs socketdir | sed 's/.*\///'`"
+                gpg_socket: "TODO: get it with `gpgconf --list-dirs socketdir | sed 's/.*\\///'`"
         tmux:
                 terminal: {{ $tmux_terminal | quote }}
