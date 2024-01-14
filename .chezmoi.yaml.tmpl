@@ -1,8 +1,8 @@
 {{- $choices := list "foot*:Tc" "screen-256color" -}}
-{{- $tmux_terminal := promptChoiceOnce "Default terminal for tmux" $choices "foot*:Tc" -}}
+{{- $tmux_terminal := promptChoiceOnce . "tmux.terminal" "Default terminal for tmux" $choices "foot*:Tc" -}}
 
-{{- $user_name := promptStringOnce "Full name" "Rasmus Bertell" -}}
-{{- $user_email := promptStringOnce "Email address" "rasmus@bertell.fi" -}}
+{{- $user_name := promptStringOnce . "user.name" "Full name" "Rasmus Bertell" -}}
+{{- $user_email := promptStringOnce . "user.email" "Email address" "rasmus@bertell.fi" -}}
 
 secrets: "error"
 
