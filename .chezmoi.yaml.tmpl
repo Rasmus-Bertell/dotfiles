@@ -4,7 +4,8 @@
 {{- $user_name := promptStringOnce . "user.name" "Full name" "Rasmus Bertell" -}}
 {{- $user_email := promptStringOnce . "user.email" "Email address" "rasmus@bertell.fi" -}}
 
-secrets: "error"
+add:
+        secrets: "error"
 
 git:
         autoAdd:    true
