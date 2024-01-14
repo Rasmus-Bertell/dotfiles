@@ -1,7 +1,10 @@
 {{- $choices := list "foot*:Tc" "screen-256color" -}}
-{{- $tmux_terminal := promptChoice "What is tmux default terminal" $choices "foot*:Tc" -}}
+{{- $tmux_terminal := promptChoiceOnce "Default terminal for tmux" $choices "foot*:Tc" -}}
 
-{{- $email := promptString "What is the users email" "rasmus@bertell.fi" -}}
+{{- $user_name := promptStringOnce "Full name" "Rasmus Bertell" -}}
+{{- $user_email := promptStringOnce "Email address" "rasmus@bertell.fi" -}}
+
+secrets: "error"
 
 git:
         autoAdd:    true
@@ -25,7 +28,8 @@ merge:
 
 data:
         user:
-                email: {{ $email | quote }}
+                name: {{ $user_name | quote }}
+                email: {{ $user_email | quote }}
                 gpg_socket: "TODO: get it with `gpgconf --list-dirs socketdir | sed 's/.*\\///'`"
         tmux:
                 terminal: {{ $tmux_terminal | quote }}
