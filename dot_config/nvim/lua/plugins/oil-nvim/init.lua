@@ -1,11 +1,13 @@
 local M = { 'stevearc/oil.nvim' }
 
-M.opts = {
-        win_options = {
-                signcolumn = 'yes:2',
-        },
-}
+-- Always load the file explorer
+M.lazy     = false
+M.priority = 900
 
 M.dependencies = { 'nvim-tree/nvim-web-devicons' }
+
+M.keys = {
+        { '-', function() require('oil').open() end }
+}
 
 return M
