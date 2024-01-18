@@ -7,7 +7,9 @@ M.opts = {
 }
 
 M.keys = {
-        { '<leader>zn', require('telekasten').new_note },
+        { '<leader>zn', function() require('telekasten').new_note() end },
+        { '<leader>zf', function() require('telekasten').find_notes() end },
+        { '<leader>zt', function() require('telekasten').show_tags() end },
 }
 
 return M
