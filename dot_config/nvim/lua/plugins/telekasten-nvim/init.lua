@@ -12,4 +12,6 @@ M.keys = {
         { '<leader>zt', function() require('telekasten').show_tags() end },
 }
 
+M.cmd = 'Telekasten'
+
 return M
