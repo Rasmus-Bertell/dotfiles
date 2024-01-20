@@ -1,13 +1,11 @@
 local M = { 'folke/tokyonight.nvim' }
 
--- Always load the colorscheme
-M.lazy     = false
-M.priority = 1000
-
-M.config = function()
-        require('tokyonight').setup({ style = 'night' })
+M.config = function(_, opts)
+        require('tokyonight').setup(opts)
 
         vim.cmd.colorscheme('tokyonight')
 end
+
+M.opts = { style = 'night' }
 
 return M

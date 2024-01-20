@@ -1,5 +1,7 @@
 local M = { 'lewis6991/gitsigns.nvim' }
 
+M.event = { 'VeryLazy' }
+
 M.opts = {
         signcolumn         = true,
         current_line_blame = true,
@@ -41,7 +43,5 @@ M.opts = {
                 map('n', '<leader>db', gs.diffthis)
         end
 }
-
-M.event = { 'VeryLazy' }
 
 return M

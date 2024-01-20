@@ -1,8 +1,12 @@
 local M = { 'stevearc/conform.nvim' }
 
+M.cmd = { "ConformInfo" }
+
 M.event = { "BufWritePre" }
 
-M.cmd = { "ConformInfo" }
+M.init = function()
+        vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+end
 
 M.opts = {
         formatters_by_ft = {},
@@ -11,9 +15,5 @@ M.opts = {
                 lsp_fallback = true
         },
 }
-
-M.init = function()
-        vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-end
 
 return M
