@@ -42,4 +42,6 @@ M.opts = {
         end
 }
 
+M.event = { 'VeryLazy' }
+
 return M
