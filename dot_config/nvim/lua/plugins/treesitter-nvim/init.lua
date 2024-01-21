@@ -7,7 +7,10 @@ M.event = { 'VeryLazy' }
 M.main = 'nvim-treesitter.configs'
 
 M.opts = {
-        ensure_installed = { 'lua', 'php', 'html', 'css' },
+        ensure_installed = {
+                'vim', 'regex', 'lua', 'bash', 'markdown', 'markdown_inline',
+                'php', 'html', 'css'
+        },
         highlight = { enable = true },
         incremental_selection = {
                 enable = true,
