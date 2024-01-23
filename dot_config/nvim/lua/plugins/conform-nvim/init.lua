@@ -9,6 +9,7 @@ M.init = function()
 end
 
 M.opts = {
+        -- TODO: Add formatters
         formatters_by_ft = {},
         format_on_save = {
                 timeout_ms = 500,
