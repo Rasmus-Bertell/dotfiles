@@ -23,3 +23,41 @@ vim.opt.clipboard      = "unnamedplus"
 vim.opt.signcolumn     = "yes"
 vim.opt.number         = true
 vim.opt.relativenumber = true
+
+-- Split new windows below and to the right
+vim.opt.splitbelow     = true
+vim.opt.splitright     = true
+
+-- Show hidden characters
+vim.opt.list           = true
+vim.opt.listchars      = {
+        tab = "»·",
+        trail = "·",
+        extends = "…",
+        precedes = "…",
+        nbsp = "␣"
+}
+
+-- Use case insensitive search, highlight matches and show search state
+vim.opt.ignorecase     = true
+vim.opt.smartcase      = true
+vim.opt.hlsearch       = true
+vim.opt.incsearch      = true
+
+-- Use a single status line
+vim.opt.laststatus     = 3
+
+-- Disable messages when changing modes
+vim.opt.showmode       = false
+
+-- Disable swap files
+vim.opt.swapfile       = false
+
+-- Enable backup and undo
+vim.opt.backup         = true
+vim.opt.backupdir      = vim.fn.expand('~/.cache/nvim/backup/')
+vim.opt.directory      = vim.fn.expand('~/.cache/nvim/backup/')
+vim.opt.undofile       = true
+vim.opt.undodir        = vim.fn.expand('~/.cache/nvim/undo/')
+vim.opt.undolevels     = 1000
+vim.opt.undoreload     = 10000

@@ -10,8 +10,8 @@ M.event = 'VeryLazy'
 M.opts = {
         lsp = {
                 override = {
-                        ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                        ["vim.lsp.util.stylize_markdown"] = true,
+                        ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+                        ['vim.lsp.util.stylize_markdown'] = true,
                 },
         },
         presets = {
@@ -22,8 +22,8 @@ M.opts = {
         },
         routes = {
                 {
-                        view = "notify",
-                        filter = { event = "msg_showmode" },
+                        view = 'notify',
+                        filter = { event = 'msg_showmode' },
                 },
         },
 }

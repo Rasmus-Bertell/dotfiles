@@ -15,6 +15,7 @@ M.dependencies = {
 M.config = function()
         local cmp = require('cmp')
 
+        ---@diagnostic disable-next-line: redundant-parameter
         cmp.setup({
                 snippet = {
                         expand = function(args)
@@ -40,6 +41,7 @@ M.config = function()
                 })
         })
 
+        ---@diagnostic disable-next-line: undefined-field
         cmp.setup.filetype('gitcommit', {
                 sources = cmp.config.sources({
                         { name = 'git' },
@@ -48,6 +50,7 @@ M.config = function()
                 })
         })
 
+        ---@diagnostic disable-next-line: undefined-field
         cmp.setup.cmdline({ '/', '?' }, {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = {
@@ -55,6 +58,7 @@ M.config = function()
                 }
         })
 
+        ---@diagnostic disable-next-line: undefined-field
         cmp.setup.cmdline(':', {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources({
