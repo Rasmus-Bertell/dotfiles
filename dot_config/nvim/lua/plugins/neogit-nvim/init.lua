@@ -6,6 +6,8 @@ M.dependencies = {
         'nvim-telescope/telescope.nvim',
 }
 
-M.config = true
+M.opts = {
+        disable_insert_on_commit = true
+}
 
 return M
