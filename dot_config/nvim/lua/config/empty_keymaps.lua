@@ -18,3 +18,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 map({ 'n', 'v' }, '<leader>la', vim.lsp.buf.code_action, 'Code action')
         end,
 })
+
+vim.keymap.set(
+        'n',
+        '<leader>gc',
+        function() require('neogit').open({ 'commit' }) end,
+        { desc = 'Commit changes' }
+)
