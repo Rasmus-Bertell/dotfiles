@@ -7,8 +7,8 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
         end
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter', 'BufWritePost' }, {
         callback = function()
-                require("lint").try_lint()
+                require('lint').try_lint()
         end,
 })
