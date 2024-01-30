@@ -13,7 +13,7 @@ M.config = function()
                 php = {
                         'php',
                         'phpcs',
-                        'phpmd',
+                        -- 'phpmd',
                         'phpstan',
                 },
         }
