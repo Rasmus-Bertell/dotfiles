@@ -16,6 +16,7 @@ M.opts = {
                         'php_cs_fixer',
                 },
                 ["*"] = {
+                        'typos',
                         'trim_newlines',
                         'trim_whitespace',
                 },
