@@ -1,5 +1,14 @@
 -- Autocommand to change textwidth for certain filetypes
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
         pattern = { '*.md', '*.txt' },
-        command = 'setlocal textwidth=80'
+        callback = function()
+                vim.opt.textwidth = 80
+                vim.opt.colorcolumn = '0'
+        end
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        callback = function()
+                require("lint").try_lint()
+        end,
 })
