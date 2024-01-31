@@ -5,6 +5,7 @@ M.cmd = { "ConformInfo" }
 M.event = { "BufWritePre" }
 
 M.init = function()
+        vim.g.enable_autoformat = true
         vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 end
 
@@ -21,10 +22,13 @@ M.opts = {
                         'trim_whitespace',
                 },
         },
-        format_on_save = {
-                timeout_ms = 500,
-                lsp_fallback = true
-        },
+        format_on_save = function()
+                if not vim.g.enable_autoformat then
+                        return
+                end
+
+                return { timeout_ms = 500, lsp_fallback = true }
+        end,
 }
 
 return M
