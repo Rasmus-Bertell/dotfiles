@@ -12,13 +12,14 @@
         prompt = false
 
 [merge]
-	tool = nvimdiff
+        tool = nvimdiff
 
 [mergetool]
         prompt = false
+        keepBackup = false
 
 [difftool "nvimdiff"]
         cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [mergetool "nvimdiff"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
+        cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c 'wincmd w' -c 'wincmd J'"
