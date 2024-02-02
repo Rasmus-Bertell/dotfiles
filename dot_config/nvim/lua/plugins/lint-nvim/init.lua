@@ -16,6 +16,12 @@ M.config = function()
                         -- 'phpmd',
                         'phpstan',
                 },
+                json = {
+                        'jq',
+                },
+                ['*'] = {
+                        'typos',
+                }
         }
 end
 
