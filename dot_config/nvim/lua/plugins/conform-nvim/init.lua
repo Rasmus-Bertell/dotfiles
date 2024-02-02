@@ -10,11 +10,13 @@ M.init = function()
 end
 
 M.opts = {
-        -- TODO: Add formatters
         formatters_by_ft = {
                 php = {
                         'phpcbf',
                         'php_cs_fixer',
+                },
+                json = {
+                        'jq',
                 },
                 ["*"] = {
                         'typos',
