@@ -1,8 +1,8 @@
 local M = { 'stevearc/conform.nvim' }
 
-M.cmd = { "ConformInfo" }
+M.cmd = { 'ConformInfo' }
 
-M.event = { "BufWritePre" }
+M.event = { 'BufWritePre' }
 
 M.init = function()
         vim.g.enable_autoformat = true
@@ -18,7 +18,7 @@ M.opts = {
                 json = {
                         'jq',
                 },
-                ["*"] = {
+                ['*'] = {
                         'typos',
                         'trim_newlines',
                         'trim_whitespace',
