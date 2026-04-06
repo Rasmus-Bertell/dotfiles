@@ -1,0 +1,9 @@
+{{ $email := promptStringOnce . "email" "What is your email address" -}}
+
+sourceDir = "~/projects/dotfiles"
+
+[git]
+autoPush = true
+
+[data]
+email = {{ $email | quote }}
