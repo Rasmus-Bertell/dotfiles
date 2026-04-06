@@ -1,5 +1,6 @@
 {{ $email := promptStringOnce . "email" "What is your email address" -}}
 
+# Bootstrap this before cloning the repository with `chezmoi init`
 sourceDir = "~/projects/dotfiles"
 
 [git]
