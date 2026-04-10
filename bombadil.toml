@@ -1,0 +1,8 @@
+dotfiles_dir = "projects/dotfiles"
+gpg_user_id  = "rasmus@bertell.fi"
+
+import = []
+
+[settings]
+vars      = []
+posthooks = []
