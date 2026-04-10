@@ -1,0 +1,13 @@
+[user]
+        name       = "Rasmus Bertell"
+        email      = "rasmus@bertell.fi"
+        signingkey = "rasmus@bertell.fi"
+
+[push]
+        gpgSign = true
+
+[commit]
+        gpgSign = true
+
+[tag]
+        gpgSign = true

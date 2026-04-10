@@ -6,3 +6,6 @@ import = []
 [settings]
 vars      = []
 posthooks = []
+
+[settings.dots]
+gitconfig = { source = "git/config", target = ".config/git/config" }
