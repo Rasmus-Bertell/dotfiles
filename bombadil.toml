@@ -6,9 +6,14 @@ import = []
 [settings]
 vars      = []
 prehooks  = []
-posthooks = ["scripts/install_tpm.sh"]
+posthooks = [
+        "scripts/install_tpm.sh",
+        "nvim --headless '+Lazy! sync' +qa",
+]
 
 [settings.dots]
 gitconfig = { source = "git/config",        target = ".config/git/config" }
+nvim      = { source = "nvim/init.lua",     target = ".config/nvim/init.lua" }
+nvim_conf = { source = "nvim/lua",          target = ".config/nvim/lua" }
 tmux      = { source = "tmux/tmux.conf",    target = ".config/tmux/tmux.conf" }
 zathura   = { source = "zathura/zathurarc", target = ".config/zathura/zathurarc" }
