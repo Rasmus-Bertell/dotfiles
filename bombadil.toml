@@ -9,5 +9,6 @@ prehooks  = []
 posthooks = ["scripts/install_tpm.sh"]
 
 [settings.dots]
-gitconfig = { source = "git/config",     target = ".config/git/config" }
-tmux      = { source = "tmux/tmux.conf", target = ".config/tmux/tmux.conf" }
+gitconfig = { source = "git/config",        target = ".config/git/config" }
+tmux      = { source = "tmux/tmux.conf",    target = ".config/tmux/tmux.conf" }
+zathura   = { source = "zathura/zathurarc", target = ".config/zathura/zathurarc" }
