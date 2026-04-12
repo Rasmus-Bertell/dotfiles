@@ -7,7 +7,7 @@ import = []
 vars      = []
 prehooks  = []
 posthooks = [
-        "scripts/install_tpm.sh",
+        "~/projects/dotfiles/scripts/install_tpm.sh",
         "nvim --headless '+Lazy! sync' +qa",
 ]
 
