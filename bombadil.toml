@@ -7,15 +7,14 @@ import = []
 vars      = []
 prehooks  = []
 posthooks = [
-        "~/projects/dotfiles/scripts/install_tpm.sh",
         "nvim --headless '+Lazy! sync' +qa",
 ]
 
 [settings.dots]
-gitconfig = { source = "git/config",        target = ".config/git/config" }
-nvim      = { source = "nvim/init.lua",     target = ".config/nvim/init.lua" }
-nvim_conf = { source = "nvim/lua",          target = ".config/nvim/lua" }
-tmux      = { source = "tmux/tmux.conf",    target = ".config/tmux/tmux.conf" }
-nushell   = { source = "nushell/config.nu", target = ".config/nushell/config.nu" }
-foot      = { source = "foot/foot.ini",     target = ".config/foot/foot.ini" }
-zathura   = { source = "zathura/zathurarc", target = ".config/zathura/zathurarc" }
+gitconfig = { source = "git/config",             target = ".config/git/config" }
+nvim      = { source = "nvim/init.lua",          target = ".config/nvim/init.lua" }
+nvim_conf = { source = "nvim/lua",               target = ".config/nvim/lua" }
+zellij    = { source = "zellij/config.kdl",      target = ".config/zellij/config.kdl" }
+nushell   = { source = "nushell/config.nu",      target = ".config/nushell/config.nu" }
+ghostty   = { source = "ghostty/config.ghostty", target = ".config/ghostty/config.ghostty" }
+zathura   = { source = "zathura/zathurarc",      target = ".config/zathura/zathurarc" }
