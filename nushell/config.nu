@@ -25,7 +25,7 @@ load-env {
         XDG_DATA_HOME:   ($env.XDG_DATA_HOME?   | default ($nu.home-dir | path join ".local" "share"))
         XDG_STATE_HOME:  ($env.XDG_STATE_HOME?  | default ($nu.home-dir | path join ".local" "state"))
 
-        XDG_DESKTOP_DIR:     ($env.XDG_DESKTOP_DIR?     | default ($nu.home-dir))
+        XDG_DESKTOP_DIR:     ($env.XDG_DESKTOP_DIR?     | default ($nu.home-dir | path join "documents"))
         XDG_DOCUMENTS_DIR:   ($env.XDG_DOCUMENTS_DIR?   | default ($nu.home-dir | path join "documents"))
         XDG_DOWNLOAD_DIR:    ($env.XDG_DOWNLOAD_DIR?    | default ($nu.home-dir | path join "documents" "downloads"))
         XDG_MUSIC_DIR:       ($env.XDG_MUSIC_DIR?       | default ($nu.home-dir | path join "media" "music"))
