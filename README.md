@@ -4,9 +4,15 @@ Personal configuration files for shell, editor, and system settings.
 
 ## Installation
 
+### Prerequisites
+
+- Install [Toml Bombadil](https://oknozor.github.io/toml-bombadil/)
+
+### Steps
+
 > [!IMPORTANT]
 > [Toml Bombadil](https://oknozor.github.io/toml-bombadil/) is unable to
-> extract SSH keys from PGP private key, so the repo needs to be cloned
+> extract SSH keys from GPG private key, so the repo needs to be cloned
 > manually instead.
 
 ```nu
