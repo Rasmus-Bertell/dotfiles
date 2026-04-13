@@ -14,8 +14,8 @@ vim.o.ignorecase  = true
 vim.o.splitright = true
 vim.o.splitbelow = true
 
-vim.o.textwidth   = 80 + 40
-vim.o.colorcolumn = '-0,-20,-40'
+vim.o.textwidth   = 80
+vim.o.colorcolumn = '+0'
 vim.o.wrap        = false
 
 vim.o.signcolumn = 'yes:2'
