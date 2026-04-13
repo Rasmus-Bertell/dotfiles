@@ -18,3 +18,5 @@ zellij    = { source = "zellij/config.kdl",      target = ".config/zellij/config
 nushell   = { source = "nushell/config.nu",      target = ".config/nushell/config.nu" }
 ghostty   = { source = "ghostty/config.ghostty", target = ".config/ghostty/config.ghostty" }
 zathura   = { source = "zathura/zathurarc",      target = ".config/zathura/zathurarc" }
+gpg-agent = { source = "gnupg/gpg-agent.conf",   target = ".gnupg/gpg-agent.conf" }
+scdaemon  = { source = "gnupg/scdaemon.conf",    target = ".gnupg/scdaemon.conf" }
