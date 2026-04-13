@@ -35,3 +35,6 @@ vim.opt.diffopt:append('indent-heuristic')
 
 vim.o.list      = true
 vim.o.listchars = 'leadmultispace: ,multispace:.,trail:.,tab:<->,extends:>,precedes:<,nbsp:_'
+
+vim.o.background = 'light'
+vim.cmd.colorscheme('quiet')
