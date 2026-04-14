@@ -3,11 +3,18 @@
         email      = "{{ user.email }}"
         signingkey = "{{ user.email }}"
 
-[push]
-        gpgSign = if-asked
-
 [commit]
         gpgSign = true
 
 [tag]
         gpgSign = true
+
+[push]
+        gpgSign = if-asked
+
+[merge]
+        tool = nvimdiff2
+
+[mergetool]
+        keepBackup = false
+        prompt     = false
