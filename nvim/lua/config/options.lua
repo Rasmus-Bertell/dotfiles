@@ -30,8 +30,8 @@ vim.opt.clipboard:append('unnamedplus')
 vim.o.updatetime = 50
 vim.o.winborder  = 'rounded'
 
-vim.opt.diffopt:append('algorithm:patience')
-vim.opt.diffopt:append('indent-heuristic')
+vim.opt.diffopt:append('algorithm:histogram')
+vim.opt.diffopt:append('iwhiteall')
 
 vim.o.list      = true
 vim.o.listchars = 'leadmultispace: ,multispace:.,trail:.,tab:<->,extends:>,precedes:<,nbsp:_'
