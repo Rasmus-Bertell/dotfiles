@@ -1,7 +1,7 @@
 [user]
-        name       = "Rasmus Bertell"
-        email      = "rasmus@bertell.fi"
-        signingkey = "rasmus@bertell.fi"
+        name       = "{{ user.name }}"
+        email      = "{{ user.email }}"
+        signingkey = "{{ user.email }}"
 
 [push]
         gpgSign = if-asked

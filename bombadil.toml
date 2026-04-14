@@ -4,7 +4,7 @@ gpg_user_id  = "rasmus@bertell.fi"
 import = []
 
 [settings]
-vars      = []
+vars      = [ "vars/default.toml" ]
 prehooks  = []
 posthooks = [
         "nvim --headless '+Lazy! sync' +qa",
@@ -20,3 +20,11 @@ ghostty   = { source = "ghostty/config.ghostty", target = ".config/ghostty/confi
 zathura   = { source = "zathura/zathurarc",      target = ".config/zathura/zathurarc" }
 gpg-agent = { source = "gnupg/gpg-agent.conf",   target = ".gnupg/gpg-agent.conf" }
 scdaemon  = { source = "gnupg/scdaemon.conf",    target = ".gnupg/scdaemon.conf" }
+
+[profiles.work]
+vars           = [ "vars/work.toml" ]
+prehooks       = []
+posthooks      = []
+extra_profiles = []
+
+[profiles.work.dots]
