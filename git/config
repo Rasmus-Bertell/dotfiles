@@ -13,8 +13,11 @@
         gpgSign = if-asked
 
 [merge]
-        tool = nvimdiff2
+        tool = nvimdiff
 
 [mergetool]
         keepBackup = false
         prompt     = false
+
+[mergetool.nvimdiff]
+        layout = "LOCAL,REMOTE/MERGED"
