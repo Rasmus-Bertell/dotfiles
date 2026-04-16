@@ -25,7 +25,7 @@ vim.o.scrolloff     =  5
 vim.o.sidescrolloff = 15
 
 vim.opt.completeopt:append('noselect')
-vim.opt.clipboard:append('unnamedplus')
+-- vim.opt.clipboard:append('unnamedplus')
 
 vim.o.updatetime = 50
 vim.o.winborder  = 'rounded'
