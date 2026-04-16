@@ -3,6 +3,11 @@ use std/util "path add"
 $env.config.show_banner   = false
 $env.config.buffer_editor = "nvim"
 
+$env.config.hooks.pre_execution = [
+        { $env.GPG_TTY = (tty) }
+        { gpg-connect-agent updatestartuptty /bye | ignore }
+]
+
 path add (composer config --global home | path join "vendor" "bin")
 path add ($nu.home-dir | path join ".local" "bin")
 
@@ -23,4 +28,6 @@ load-env {
         XDG_VIDEOS_DIR:      ($env.XDG_VIDEOS_DIR?      | default ($nu.home-dir | path join "media" "videos"))
 
         EDITOR: "nvim"
+
+        SSH_AUTH_SOCK: (gpgconf --list-dirs agent-ssh-socket)
 }
