@@ -36,9 +36,6 @@ vim.opt.diffopt:append('iwhiteall')
 vim.o.list      = true
 vim.o.listchars = 'leadmultispace: ,multispace:.,trail:.,tab:<->,extends:>,precedes:<,nbsp:_'
 
-vim.o.background = 'light'
-vim.cmd.colorscheme('quiet')
-
 vim.g.netrw_banner        = 0
 vim.g.netrw_hide          = 1
 vim.g.netrw_list_hide     = [[\(^\|\s\s\)\zs\.\S\+]]
