@@ -12,6 +12,9 @@
 [push]
         gpgSign = if-asked
 
+[pull]
+        rebase = true
+
 [merge]
         tool = nvimdiff
 
