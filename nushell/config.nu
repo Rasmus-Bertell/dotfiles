@@ -1,12 +1,6 @@
-use std/util "path add"
-
-$env.config.show_banner   = false
-$env.config.buffer_editor = "nvim"
-
-$env.config.hooks.pre_execution = [
-        { load-env { GPG_TTY: (tty) } }
-        { gpg-connect-agent updatestartuptty /bye | ignore }
-]
+# ---------------------
+# Environment Variables
+# ---------------------
 
 load-env {
         XDG_CONFIG_HOME: ($env.XDG_CONFIG_HOME? | default ($nu.home-dir | path join ".config"))
@@ -30,5 +24,34 @@ load-env {
         SSH_AUTH_SOCK: (gpgconf --list-dirs agent-ssh-socket)
 }
 
+# ----------------
+# Path Environment
+# ----------------
+
+use std/util "path add"
+
 path add (composer config --global home | path join "vendor" "bin")
 path add ($nu.home-dir | path join ".local" "bin")
+
+# ------------------------
+# History-related Settings
+# ------------------------
+
+$env.config.history.file_format           = 'sqlite'
+$env.config.history.max_size              = 5_000_000
+$env.config.history.sync_on_enter         = true
+$env.config.history.isolation             = true
+$env.config.history.path                  = ($env.XDG_STATE_HOME | path join "nushell")
+$env.config.history.ignore_space_prefixed = true
+
+# -----------------------
+# TODO: Organize the rest
+# -----------------------
+
+$env.config.show_banner   = false
+$env.config.buffer_editor = "nvim"
+
+$env.config.hooks.pre_execution = [
+        { load-env { GPG_TTY: (tty) } }
+        { gpg-connect-agent updatestartuptty /bye | ignore }
+]
