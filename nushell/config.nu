@@ -4,12 +4,9 @@ $env.config.show_banner   = false
 $env.config.buffer_editor = "nvim"
 
 $env.config.hooks.pre_execution = [
-        { $env.GPG_TTY = (tty) }
+        { load-env { GPG_TTY: (tty) } }
         { gpg-connect-agent updatestartuptty /bye | ignore }
 ]
-
-path add (composer config --global home | path join "vendor" "bin")
-path add ($nu.home-dir | path join ".local" "bin")
 
 load-env {
         XDG_CONFIG_HOME: ($env.XDG_CONFIG_HOME? | default ($nu.home-dir | path join ".config"))
@@ -28,6 +25,10 @@ load-env {
         XDG_VIDEOS_DIR:      ($env.XDG_VIDEOS_DIR?      | default ($nu.home-dir | path join "media" "videos"))
 
         EDITOR: "nvim"
+        VISUAL: "nvim"
 
         SSH_AUTH_SOCK: (gpgconf --list-dirs agent-ssh-socket)
 }
+
+path add (composer config --global home | path join "vendor" "bin")
+path add ($nu.home-dir | path join ".local" "bin")
