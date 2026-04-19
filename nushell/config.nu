@@ -44,12 +44,35 @@ $env.config.history.isolation             = true
 $env.config.history.path                  = ($env.XDG_STATE_HOME | path join "nushell")
 $env.config.history.ignore_space_prefixed = true
 
+# ----------------------
+# Miscellaneous Settings
+# ----------------------
+
+$env.config.show_banner      = false
+$env.config.rm.always_trash  = false
+$env.config.recursion_limit  = 255
+$env.config.auto_cd_implicit = false
+
+# ------------------
+# Clipboard Settings
+# ------------------
+
+$env.config.clip.resident_mode = ($nu.os-info.name == linux)
+$env.config.clip.default_raw   = false
+
+# ---------------------------
+# Commandline Editor Settings
+# ---------------------------
+
+$env.config.edit_mode              = "vi"
+$env.config.buffer_editor          = null
+$env.config.cursor_shape.emacs     = "inherit"
+$env.config.cursor_shape.vi_insert = "line"
+$env.config.cursor_shape.vi_normal = "block"
+
 # -----------------------
 # TODO: Organize the rest
 # -----------------------
-
-$env.config.show_banner   = false
-$env.config.buffer_editor = "nvim"
 
 $env.config.hooks.pre_execution = [
         { load-env { GPG_TTY: (tty) } }
