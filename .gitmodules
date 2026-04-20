@@ -1,3 +1,6 @@
 [submodule "rose-pine/zellij"]
 	path = rose-pine/zellij
 	url = git@github.com:rose-pine/zellij.git
+[submodule "rose-pine/zathura"]
+	path = rose-pine/zathura
+	url = git@github.com:edunfelt/zathura.git
