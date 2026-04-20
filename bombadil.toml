@@ -20,6 +20,8 @@ zathura   = { source = "zathura/zathurarc",      target = ".config/zathura/zathu
 gpg-agent = { source = "gnupg/gpg-agent.conf",   target = ".gnupg/gpg-agent.conf" }
 scdaemon  = { source = "gnupg/scdaemon.conf",    target = ".gnupg/scdaemon.conf" }
 
+rose-pine-zellij = { source = "rose-pine/zellij/dist",      target = ".config/zellij/themes" }
+
 [profiles.work]
 vars           = [ "vars/work.toml" ]
 prehooks       = []
