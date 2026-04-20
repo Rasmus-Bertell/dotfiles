@@ -20,8 +20,11 @@ load-env {
 
         EDITOR: "nvim"
         VISUAL: "nvim"
+}
 
+load-env {
         SSH_AUTH_SOCK: (gpgconf --list-dirs agent-ssh-socket)
+        CLAUDE_CONFIG_DIR: ($env.XDG_CONFIG_HOME | path join "claude")
 }
 
 # ----------------
