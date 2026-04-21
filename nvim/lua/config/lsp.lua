@@ -9,8 +9,8 @@ vim.lsp.config('intelephense', {
         filetypes    = { 'php' },
         root_markers = { 'composer.json', '.git' },
         init_options = {
-                globalStoragePath = vim.fn.stdpath('state') .. '/lsp/intelephense',
-                -- licenceKey        = vim.fn.stdpath('state') .. '/lsp/intelephense/licence.key',
+                globalStoragePath = vim.env.XDG_STATE_HOME .. '/lsp/intelephense',
+                licenceKey        = vim.env.XDG_STATE_HOME .. '/lsp/intelephense/licence.key',
         },
         settings     = {
                 intelephense = {
