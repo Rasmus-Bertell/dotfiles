@@ -1,0 +1,5 @@
+[notebook]
+dir = "$XDG_DOCUMENTS_DIR/vault"
+
+[note]
+language = "en"
