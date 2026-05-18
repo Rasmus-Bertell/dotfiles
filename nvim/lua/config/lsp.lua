@@ -21,4 +21,4 @@ vim.lsp.config('intelephense', {
         },
 })
 
-vim.lsp.enable('intelephense')
+vim.lsp.enable({ 'intelephense' })
